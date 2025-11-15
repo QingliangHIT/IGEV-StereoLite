@@ -1,0 +1,24 @@
+path: /root/autodl-tmp/Sintel/training # dataset root dir
+train: [disparities] # train disparity images(relative to 'path')
+val: [disparities]
+test: # test images (optional)
+disp_suffix_train: /*/frame_*[0-7].*
+disp_suffix_val: /*/frame_*[8,9].*
+left_replace: [disparities, final_left]
+right_replace: [disparities, final_right]
+
+nc: 3
+max_disp: 192
+disp_sz: [320, 736]
+fraction: 1
+sparse: False
+reader: readDispSintelStereo
+
+augment: True
+#val_crop: True
+stride: 32  # check image size
+img_gamma:  # gamma range
+saturation_range: [0, 1.4] # color saturation
+do_flip:
+spatial_scale: [-0.2, 0.4] # re-scale the images randomly
+noyjitter: store_true # don't simulate imperfect rectification

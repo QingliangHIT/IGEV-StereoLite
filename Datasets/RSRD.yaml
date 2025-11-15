@@ -1,0 +1,24 @@
+path: /root/autodl-tmp/RSRD/RSRD-dense # dataset root dir
+train: train/*/disparity_half # train disparity images(relative to 'path')
+val: test/disparity_half # val disparity images (relative to 'path')
+test: # test images (optional)
+disp_suffix_train: /**/**.*
+disp_suffix_val: /**/**.*
+left_replace: [disparity_half, left_half]
+right_replace: [disparity_half, right_half]
+
+nc: 3
+max_disp: 192
+disp_sz: [320, 736]
+fraction: 1
+sparse: True
+reader: readDispKITTI
+
+augment: True
+#val_crop: True
+stride: 32  # check image size
+img_gamma:  # gamma range
+saturation_range: [0, 1.4] # color saturation
+do_flip:
+spatial_scale: [-0.2, 0.4] # re-scale the images randomly
+noyjitter: store_true # don't simulate imperfect rectification

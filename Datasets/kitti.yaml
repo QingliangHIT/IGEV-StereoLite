@@ -1,0 +1,24 @@
+path: /root/autodl-fs/kitti # dataset root dir
+train: [2015\training/disp_occ_0, 2012\training/disp_occ] # train disparity images(relative to 'path')
+val: [2015\training/disp_occ_0, 2012\training/disp_occ] # val disparity images (relative to 'path')
+test: # test images (optional)
+disp_suffix_train: /**/*[0-6]_10.*
+disp_suffix_val: /**/*[7-9]_10.*
+left_replace: [[disp_occ_0, image_2], [disp_occ, image_0]]
+right_replace: [[disp_occ_0, image_3], [disp_occ, image_1]]
+
+nc: 3
+max_disp: 192
+disp_sz: [320, 736]
+fraction: 1
+sparse: True
+reader: readDispKITTI
+
+augment: True
+#val_crop: True
+stride: 32  # check image size
+img_gamma:  # gamma range
+saturation_range: [0, 1.4] # color saturation
+do_flip:
+spatial_scale: [-0.2, 0.4] # re-scale the images randomly
+noyjitter: store_true # don't simulate imperfect rectification

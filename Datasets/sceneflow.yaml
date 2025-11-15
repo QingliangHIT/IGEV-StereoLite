@@ -1,0 +1,24 @@
+path: /root/autodl-tmp/sceneflow # dataset root dir
+train: [Driving/disparity, Mondaa/disparity, FlyingThings3D/disparity] # train disparity images(relative to 'path')
+val: # validation images (optional)
+test: # test images (optional)
+disp_suffix_train: [/*/*/*/left/**/*.*, /*/left/**/*.*, /TRAIN/*/*/left/**/*.*]
+disp_suffix_val: ['', '', /TEST/*/*/left/**/*.*]
+left_replace: [disparity, frames_finalpass]
+right_replace: [disparity, frames_finalpass, left, right]
+
+nc: 3
+max_disp: 192
+disp_sz: [320, 736]
+fraction: 1
+sparse: False
+reader: read_gen
+
+augment: True
+#val_crop: True
+stride: 32  # check image size
+img_gamma:  # gamma range
+saturation_range: [0, 1.4] # color saturation
+do_flip:
+spatial_scale: [-0.2, 0.4] # re-scale the images randomly
+noyjitter: store_true # don't simulate imperfect rectification
