@@ -1,10 +1,9 @@
-# IGEV-StereoLite
+# Iterative Geometry Encoding Volume stereo-Lite
+> Core code reference: igev_lite and associated files in the core directory
+> 
 Research Source: 
 
 Real-time stereo reconstruction and geometric quantification of pavement distress with a variable-baseline platform
-
-# Iterative Geometry Encoding Volume stereo-Lite
-> Core code reference: igev_lite and associated files in the core directory
 
 ## 1. Environment Setup
 Install other dependencies
