@@ -13,7 +13,9 @@ Real-time stereo reconstruction and geometric quantification of pavement distres
 ![img.png](IGEV-StereoLite.png)
 > Demo
 ![img.png](demo-imgs.png)
-
+> Comparison
+![img.png](EPE.png)
+> 
 
 ## 2. Environment Setup
 Install other dependencies
