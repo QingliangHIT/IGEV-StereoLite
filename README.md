@@ -15,6 +15,7 @@ Real-time stereo reconstruction and geometric quantification of pavement distres
 ![img.png](demo-imgs.png)
 > Comparison
 ![img.png](EPE.png)
+![img.png](Runtime.png)
 > 
 
 ## 2. Environment Setup
