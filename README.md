@@ -1,31 +1,30 @@
-# Iterative Geometry Encoding Volume stereo-Lite
-> Core code reference: igev_lite and associated files in the core directory
+# Iterative Geometry Encoding Volume Stereo-Lite
+> Core code reference: IGEV-Lite and associated files in the 'core' directory
 
-Research Source: 
+**Research Source: **
+*Real-time stereo reconstruction and geometric quantification of pavement distress with a variable-baseline platform*
 
-Real-time stereo reconstruction and geometric quantification of pavement distress with a variable-baseline platform
-
-## 1. Network
-> IGEV-Stereo
+## 1. Network Architecture
+### IGEV-Stereo
 > source: https://github.com/gangweiX/IGEV
 ![img.png](IGEV-Stereo.png)
-> IGEV-Stereo Lite
+### IGEV-Stereo Lite
 ![img.png](IGEV-StereoLite.png)
-> Comparison
+### Performance Comparison
 ![img.png](EPE.png)
 ![img.png](Runtime.png)
-> Demo
+### Demo Results
 ![img.png](demo-imgs.png)
 
 ## 2. Environment Setup
 Install other dependencies
-```
+``` bash
 pip install -r requirements.txt
 ```
 ## 3. Evaluation Datasets
 ```data
-└── Datasets
-    |- kitti12/15 (kitti.yaml)
+ Datasets/
+    |- kitti12_15 (kitti.yaml)
     |- SceneFlow (sceneflow.yaml)
     |- Sintel (sintel.yaml)
     |- RSRD (RSRD.yaml)
