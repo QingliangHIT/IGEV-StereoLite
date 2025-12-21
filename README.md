@@ -2,6 +2,7 @@
 > Core code reference: IGEV-Lite and associated files in the 'core' directory
 
 **Research Source: **
+
 *Real-time stereo reconstruction and geometric quantification of pavement distress with a variable-baseline platform*
 
 ## 1. Network Architecture
